@@ -1,0 +1,25 @@
+{
+  "name": "uwkirio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node build/server.js",
+    "client": "node build/client.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kathrynbrusewitz/uwkirio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "net": "^1.0.2",
+    "ip": "^1.1.4",
+    "process": "^0.11.9"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.5"
+  }
+}
