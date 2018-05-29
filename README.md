@@ -1,6 +1,6 @@
 # UWKirio
 
-This is the Client-Server Application code for UWKirio ([a UW and Kirio Smart Home capstone collaboration](https://www.mykirio.com/)) which uses [socket.io](https://socket.io/) to get and display real-time changes from Modbus, which transmits sensor information between Transport and Application layers over UDP.
+This is the Client-Server Application code for UWKirio (a UW and [Kirio Smart Home](https://www.mykirio.com/) capstone collaboration) which uses [socket.io](https://socket.io/) to get and display real-time changes from the Modbus, which transmits sensor information between Transport and Application layers over UDP.
 
 The AWS EC2 instance has an IPv4 public DNS. If needed, it looks like there is [IPv6 Support for EC2 Instances in Virtual Private Clouds](https://aws.amazon.com/blogs/aws/new-ipv6-support-for-ec2-instances-in-virtual-private-clouds/).
 
@@ -41,9 +41,7 @@ The AWS EC2 instance has an IPv4 public DNS. If needed, it looks like there is [
 
 8. Go into `uwkirio` and run `git pull` to pull the latest changes.
 
-9. You will need to rerun the `forever` script which is running the project forever on the server. To do this, just run `forever stopall` and then `forever start index.js`. 
-
-10. Now you can exit terminal.
+9. You will need to rerun the `forever` tool which is running the project forever on the server. To do this, just run `forever stopall` and then `forever start index.js` (`index.js` is the entry for the app).
 
 # Resources
 

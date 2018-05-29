@@ -1,7 +1,7 @@
 {
-  "name": "socket-chat-example",
+  "name": "uwkirio",
   "version": "0.0.1",
-  "description": "my first socket.io app",
+  "description": "Client-Server Application to get and display real-time data from Modbus over UDP",
   "dependencies": {
     "express": "^4.15.2",
     "socket.io": "^1.7.3"
