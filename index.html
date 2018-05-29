@@ -1,25 +1,33 @@
 <!doctype html>
 <html>
   <head>
-    <title>Socket.IO chat</title>
+    <title>UWKirio</title>
   </head>
   <body>
+    <!-- Where the stats appear -->
     <p>Pressure: <span id="pressure"></span></p>
     <p>Humidity: <span id="humidity"></span></p>
 
+    <!-- Send button -->
     <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
+      <input id="input" autocomplete="off" /><button>Send</button>
     </form>
+    
+    <!-- Package imports -->
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    
     <script>
       $(function () {
         var socket = io();
-        $('form').submit(function(){
+        
+        // Emit to socket the value in input with id `input`
+        $('form').submit(function() {
           socket.emit('pressure', $('#m').val());
-          $('#m').val('');
           return false;
         });
+
+        // Socket listens for messages
         socket.on('pressure', function(msg){
           $('#pressure').text(msg);
         });
