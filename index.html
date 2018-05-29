@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+  </head>
+  <body>
+    <p>Pressure: <span id="pressure"></span></p>
+    <p>Humidity: <span id="humidity"></span></p>
+
+    <form action="">
+      <input id="m" autocomplete="off" /><button>Send</button>
+    </form>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+      $(function () {
+        var socket = io();
+        $('form').submit(function(){
+          socket.emit('pressure', $('#m').val());
+          $('#m').val('');
+          return false;
+        });
+        socket.on('pressure', function(msg){
+          $('#pressure').text(msg);
+        });
+        socket.on('humidity', function(msg){
+          $('#humidity').text(msg);
+        });
+      });
+    </script>
+  </body>
+</html>
